@@ -1,0 +1,645 @@
+* {
+  /* all: unset; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  all: unset;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 70%;
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu {
+  width: 300px;
+  position: relative;
+  height: 100vh;
+}
+
+.feed {
+  height: 2000px;
+  width: 650px;
+  border-width: 1px;
+  border-color: rgba(239, 243, 244, 1);
+  border-style: solid;
+}
+
+.recommendations {
+  width: 440px;
+  padding-left: 30px;
+}
+
+.menu-logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-logo,
+.menu-link,
+.menu-account {
+  margin-left: 15px;
+}
+
+.logo {
+  height: 30px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  height: 55px;
+}
+
+.menu-link-svg-box {
+  display: flex;
+  align-items: center;
+}
+
+.menu-link-svg {
+  height: 30px;
+}
+
+.menu-link-btn-box {
+  margin-left: 15px;
+}
+
+.menu-link-btn {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+.menu-post-svg-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  background-color: #1d9bf0;
+  cursor: pointer;
+}
+
+.menu-post-svg {
+  width: 24px;
+  fill: #fff;
+}
+
+.menu-post-btn {
+  margin-top: 12px;
+  height: 50px;
+  width: 230px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 50px;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: #1d9bf0;
+}
+
+.menu-account {
+  display: inline-flex;
+  height: 50px;
+  position: absolute;
+  bottom: 30px;
+  width: calc(100% - 30px);
+}
+
+.menu-account-img,
+.menu-account-name-box,
+.menu-account-more {
+  display: inline-block;
+}
+
+.menu-account-img {
+  border-radius: 50px;
+  height: 40px;
+  margin-top: 5px;
+}
+
+.menu-account-name-box {
+  margin-left: 12px;
+  font-size: 14px;
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.menu-account-name,
+.menu-account-id {
+  display: block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.menu-account-name {
+  font-weight: bold;
+}
+
+.menu-account-id {
+  color: #707070;
+}
+
+.menu-account-more {
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 33%;
+}
+
+.feed-title {
+  height: 55px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffff9f;
+  backdrop-filter: blur(10px);
+}
+
+.feed-title-return {
+  margin-left: 10px;
+  margin-right: 30px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.feed-title-return:hover {
+  background-color: #ebebeb;
+}
+
+.feed-title-return-svg {
+  height: 20px;
+}
+
+.feed-title-account-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.feed-title-account-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.feed-title-posts-count {
+  font-size: 12px;
+  color: #707070;
+}
+
+.feed-header {
+  height: 275px;
+  position: relative;
+}
+
+.feed-header-bg-box {
+  height: 200px;
+  background-color: #e0e5f0;
+  overflow: hidden;
+}
+
+.feed-header-bg {
+  width: 100%;
+}
+
+.feed-header-img-box {
+  margin-left: 15px;
+  position: absolute;
+  bottom: 0;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  overflow: hidden;
+}
+
+.feed-header-img {
+  height: 100%;
+  width: 100%;
+}
+
+.feed-header-edit-btn {
+  width: 110px;
+  height: 38px;
+  border: 2px solid #d0d0d0;
+  background-color: #fff;
+  position: absolute;
+  right: 15px;
+  bottom: 25px;
+  border-radius: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.feed-header-edit-btn:hover {
+  background-color: #e0e5f0;
+}
+
+.feed-account-info-name-box,
+.feed-account-info-about {
+  margin-left: 15px;
+}
+
+.feed-account-info-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.feed-account-info-id {
+  color: #6d6d6d;
+  font-size: 14px;
+}
+
+.feed-account-info-name,
+.feed-account-info-id {
+  display: block;
+}
+
+.feed-account-info-about {
+  font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.feed-account-info-follows-box {
+  margin-top: 15px;
+  display: flex;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.feed-account-info-following,
+.feed-account-info-following {
+  margin-right: 20px;
+}
+
+.feed-account-info-following-count,
+.feed-account-info-followers-count {
+  font-weight: bold;
+}
+
+.feed-account-info-following-txt,
+.feed-account-info-followers-txt {
+  color: #6d6d6d;
+}
+
+.feed-account-info-additional {
+  height: 20px;
+  display: flex;
+  padding-left: 15px;
+  align-items: center;
+}
+
+.feed-account-info-location,
+.feed-account-info-birthdate,
+.feed-account-info-registrationdate {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.feed-account-info-additional span {
+  font-size: 14px;
+  color: #6d6d6d;
+  margin-right: 10px;
+}
+
+.feed-account-info-location-svg,
+.feed-account-info-birthdate-svg,
+.feed-account-info-registrationdate-svg {
+  height: 20px;
+  margin-right: 3px;
+  stroke: #f1f1f1;
+  opacity: 0.8;
+}
+
+.feed-tabs {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.feed-tabs button {
+  flex-grow: 1;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  color: #6d6d6d;
+  font-size: 14px;
+}
+
+.feed-tabs button.active {
+  font-weight: bold;
+  color: #000;
+}
+
+.feed-tabs button:hover {
+  background-color: #e4e4e4;
+}
+
+.feed-tabs button.active:after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 50%;
+  left: 25%;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  background-color: #1d9bf0;
+}
+
+.search-box {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+  height: 55px;
+  width: 100%;
+}
+
+.search-box * {
+  background-color: transparent;
+}
+
+.search {
+  position: absolute;
+  display: flex;
+  border-radius: 35px;
+  height: 45px;
+  width: 100%;
+  margin-top: 5px;
+  background-color: #f1f1f1;
+}
+
+.search.active {
+  border: 1px solid #1d9bf0;
+}
+
+.search:focus {
+  border: 1px solid #000;
+}
+
+.search-svg {
+  width: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+  fill: #6d6d6d;
+}
+
+.search.active .search-svg {
+  fill: #1d9bf0;
+}
+
+.search-input {
+  border: none;
+  font-size: 15px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.lives,
+.recommended-accounts,
+.trends {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  margin-top: 15px;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lives-post-account-img {
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-right: 5px;
+}
+
+.lives-post {
+  margin-top: 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.lives-post-account {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.lives-post-triangle {
+  height: 14px;
+  width: 14px;
+  margin-right: 3px;
+  margin-top: 3px;
+}
+
+.lives-account {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.lives-account-img-box {
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 50px;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+}
+
+.lives-account-img {
+  height: 100%;
+  width: 100%;
+}
+
+.recommended-accounts {
+  padding: 0;
+  padding-top: 15px;
+}
+
+.recommended-account {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.recommended-accounts-title {
+  padding-left: 15px;
+}
+
+.recommended-account:hover {
+  background-color: #e6e6e6;
+}
+
+.recommended-account-img-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 7px;
+}
+
+.recommended-account-img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.recommended-account-data {
+  flex-grow: 1;
+}
+
+.recommended-account-about {
+  font-weight: bold;
+}
+
+.recommended-account-id {
+  color: #707070;
+}
+
+.recommended-account-btn {
+  background-color: #000;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.recommended-account-btn:hover {
+  background-color: #2c2c2c;
+  transition: 0.2s;
+}
+
+.recommended-accounts-more {
+  width: 100%;
+  height: 60px;
+}
+
+.recommended-accounts-more-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding-left: 17px;
+  color: rgb(29, 155, 240);
+}
+
+.recommended-accounts-more-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.trends {
+  padding: 0;
+}
+
+.tredns-title {
+  padding: 15px;
+}
+
+.trends-tag {
+  width: 100%;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trends-tag:hover {
+  cursor: pointer;
+  background-color: #e6e6e6;
+}
+
+.trends-tag-categories,
+.trends-tag-name,
+.trends-tag-posts {
+  padding: 3px 0;
+}
+
+.trends-tag-categories {
+  display: flex;
+  align-items: center;
+}
+
+.trends-tag-category,
+.trends-tag-categories span {
+  font-size: 12px;
+  display: inline-block;
+  color: rgb(83, 100, 113);
+}
+
+.trends-tag-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.trends-tag-posts {
+  font-size: 12px;
+  color: rgb(83, 100, 113);
+}
+
+.trends-more {
+  width: 100%;
+  height: 60px;
+}
+
+.trends-more-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding-left: 17px;
+  color: rgb(29, 155, 240);
+}
+
+.trends-more-btn:hover {
+  background-color: #e6e6e6;
+}
+
+@media (min-width: 1400px) {
+  .menu-post-svg-box {
+    display: none;
+  }
+}
+
+@media (max-width: 1399px) {
+  .menu-link-btn-box {
+    display: none;
+  }
+  .menu-post-btn-box {
+    display: none;
+  }
+}
