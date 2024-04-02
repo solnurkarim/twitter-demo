@@ -21,12 +21,13 @@ main {
 }
 
 .menu {
-  width: 300px;
-  position: relative;
+  width: 250px;
+  position: fixed;
   height: 100vh;
 }
 
 .feed {
+  margin-left: 250px;
   height: 2000px;
   width: 650px;
   border-width: 1px;
